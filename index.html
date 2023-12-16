@@ -6,92 +6,65 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
+      background-color: #f4f4f4;
       margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
 
     .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
       border-radius: 8px;
+      width: 300px;
     }
 
-    h1 {
-      color: #333;
+    form {
+      display: flex;
+      flex-direction: column;
     }
 
-    h2 {
-      color: #555;
-    }
-
-    p {
-      line-height: 1.6;
-      color: #666;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
+    label {
       margin-bottom: 8px;
     }
 
-    footer {
-      text-align: center;
-      padding: 10px 0;
-      background-color: #333;
+    input {
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4caf50;
       color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
     }
   </style>
-  <title>Página de Cocina</title>
+  <title>Página de Inicio de Sesión</title>
 </head>
 <body>
-  <header>
-    <h1>Receta del Chef</h1>
-  </header>
-
   <div class="container">
-    <h2>Pollo al Horno con Hierbas</h2>
-    <p>Disfruta de esta deliciosa receta de pollo al horno con hierbas frescas. ¡Es fácil de hacer y llenará tu hogar con un aroma irresistible!</p>
+    <form action="login.php" method="post">
+      <h2>Iniciar Sesión</h2>
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" name="username" required>
 
-    <h2>Ingredientes:</h2>
-    <ul>
-      <li>4 piezas de muslos de pollo</li>
-      <li>2 cucharadas de aceite de oliva</li>
-      <li>1 cucharadita de sal</li>
-      <li>1/2 cucharadita de pimienta negra</li>
-      <li>1 cucharadita de tomillo fresco picado</li>
-      <li>1 cucharadita de romero fresco picado</li>
-      <li>1 cucharadita de perejil fresco picado</li>
-      <li>2 dientes de ajo, picados</li>
-      <li>1 limón (jugo y ralladura)</li>
-    </ul>
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required>
 
-    <h2>Instrucciones:</h2>
-    <ol>
-      <li>Precalienta el horno a 200°C.</li>
-      <li>En un tazón, mezcla el aceite de oliva, sal, pimienta, tomillo, romero, perejil, ajo, jugo y ralladura de limón.</li>
-      <li>Coloca los muslos de pollo en una bandeja para horno y frota la mezcla de hierbas sobre cada pieza.</li>
-      <li>Hornea durante 30-35 minutos o hasta que el pollo esté bien cocido y dorado.</li>
-      <li>Sirve caliente y disfruta.</li>
-    </ol>
+      <button type="submit">Ingresar</button>
+    </form>
   </div>
-
-  <footer>
-    <p>&copy; 2023 Página de Cocina</p>
-  </footer>
 </body>
 </html>
