@@ -110,7 +110,7 @@
       background-color: #0067b8;
       display: block;
       width: 100%;
-      bottom: 3px; /* Ajusta según tus necesidades */
+      bottom: 20px; /* Ajusta según tus necesidades */
       right: -75%; /* Ajusta según tus necesidades */
       width: 20%; /* Hace que el botón ocupe el 100% del ancho del contenedor */
     }
@@ -122,8 +122,12 @@
     /* Estilos específicos para tamaños de pantalla pequeños, como teléfonos */
     @media only screen and (max-width: 600px) {
       .container {
-        width: 90%; /* Reduce el ancho del contenedor para pantallas pequeñas */
-        padding: 20px; /* Reduzca el relleno para pantallas pequeñas */
+        width: 100%; /* Cambiado a 100% para que ocupe todo el ancho en dispositivos móviles */
+        padding: 20px; /* Ajuste de padding para dispositivos móviles */
+        box-shadow: none; /* Quitando la sombra en dispositivos móviles */
+        position: fixed; /* Fijando el contenedor en la parte superior */
+        top: 0; /* Alineando en la parte superior */
+        height: 1000px;
       }
 
       button {
@@ -131,6 +135,7 @@
       }
 
       button {
+        margin-top: -670px; /* Ajusta según la cantidad de desplazamiento que desees */
         width: 10%; /* Haga que el botón ocupe el 100% del ancho del contenedor */
       }
 
@@ -146,7 +151,28 @@
       .texto {
         text-align: center; /* Alinee el texto al centro en pantallas pequeñas */
       }
-    }
+      .mJNHvZHfqTAjshj {
+    width: 100%; /* Hace que ocupe todo el ancho en dispositivos móviles */
+    margin-top: 0; /* Elimina el margen superior en dispositivos móviles */
+    box-shadow: none; /* Quita la sombra en dispositivos móviles */
+    position: fixed; /* Fija el contenedor en la parte superior en dispositivos móviles */
+    top: 0; /* Ajusta para situarlo en la parte superior */
+    bottom: unset; /* Elimina el posicionamiento inferior en dispositivos móviles */
+  }
+
+  .GcoybiklEMpmnCD {
+    text-align: center; /* Centra el contenido en dispositivos móviles */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 10px; /* Ajusta según tus necesidades */
+    box-sizing: border-box;
+    position: absolute; /* Permite que el cuadro ocupe toda la pantalla */
+    top: 50%; /* Alinea la parte superior del cuadro al 50% de la pantalla */
+    transform: translateY(-50%); /* Centra verticalmente el cuadro */
+  }
+
+
+}
+  
 
     .boton {
       font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
@@ -213,6 +239,25 @@
       box-sizing: border-box;
       margin: 10px 0; /* Ajustar márgenes superior e inferior según tus preferencias */
     }
+    .mJNHvZHfqTAjshj {
+  width: 90%;
+  padding: 5px 14px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 415px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+  margin-top: 20px; /* Ajusta según tus necesidades */
+  position: fixed; /* Para posicionar fijo en la ventana */
+  bottom: 10px; /* Para situarlo en la parte inferior */
+}
+
+.GcoybiklEMpmnCD{
+    display: table-cell;
+    font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+    vertical-align: middle;
+}
+
   </style>
   <title>Página de Inicio de Sesión</title>
 </head>
@@ -228,15 +273,23 @@
       <input type="password" id="password" name="password" placeholder="Contraseña" required>
       <div class="texto">
         <p class="texto-azul">No tiene una cuenta? <span class="azul">Cree una.</span></p>
+        <span class="azul">Opciones de inicio de sesión</span></p>
+
       </div>
       <div class="forma">
 
       </div>
       <p></p>
       <div class="boton" >
-        <button type="submit">Ingresar</button>
+        <button type="submit">Siguiente</button>
       </div>
     </form>
   </div>
+ 
+ 
+</div>
+
 </body>
+
+</div>
 </html>
